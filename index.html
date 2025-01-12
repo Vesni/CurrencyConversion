@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1> Rupees To Dollar Conversion (1$ = ₹84.5)</h1>
+  <select id='Curren'> 
+    <option value = 'C'> ₹ to $ </option>
+    <option value = 'F'> $ to ₹ </option>
+  </select>
+  <input type='text' id='money' placeholder ='Enter The Amount'></input>
+  <button onclick='convert()'>Convert</button>
+  <p id="result"> </p>
+<script>
+  
+  function convert(){
+  let money = document.getElementById('money').value;
+    let Curren = document.getElementById('Curren').value;
+  
+ let result = document.getElementById('result');
+let ans;
+if(Curren == 'C') {
+    ans =   "$" + (money / 84.5)
+     }
+      else{
+        ans =  "₹" + (money * 84.5)
+      }
+      result.innerText = "result:" + ans
+    }  
+  
+  
+  
+  </script>
+   
+</body>
+</html>
